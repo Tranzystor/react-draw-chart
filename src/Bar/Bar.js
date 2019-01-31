@@ -40,9 +40,24 @@ const Bar = ({ data }) => {
     );
   });
 
+  const ticks = data.map(x => {
+    const xAttr = xScale(x.key) + barWidth / 2;
+    return (
+      <line
+        key={`marker_${x.key}`}
+        x1={xAttr}
+        y1="200"
+        x2={xAttr}
+        y2={height}
+        style={{ stroke: 'black' }}
+      />
+    );
+  });
+
   return (
     <svg width={width} height={height} style={{ background }}>
       <g>{result}</g>
+      <g>{ticks}</g>
     </svg>
   );
 };
