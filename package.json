@@ -24,7 +24,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prepare": "yarn build",
-    "prerelease": "yarn run lint:fix && yarn run test:coverage && yarn run build",
+    "prerelease": "yarn run lint && yarn run test:coverage && yarn run build",
     "release": "yarn publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
