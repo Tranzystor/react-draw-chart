@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Area = ({ text }) => <div>area div - {text}</div>;
 
@@ -8,7 +8,7 @@ Area.propTypes = {
 };
 
 Area.defaultProps = {
-  text: "Areadiv"
+  text: 'Areadiv'
 };
 
 export default Area;

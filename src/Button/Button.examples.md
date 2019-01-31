@@ -1,6 +1,7 @@
 Button examples:
 
 ###### Button
+
 ```js
-<Button text="hello world"/>
+<Button text="hello world" />
 ```
