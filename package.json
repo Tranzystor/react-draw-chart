@@ -1,12 +1,12 @@
 {
-  "name": "rollup-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Styleguidist",
-  "author": "Kai Hotz",
+  "name": "react-draw-chart",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Tranzystor",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:KaiHotz/react-rollup-boilerplate.git"
+    "url": "git@github.com:Tranzystor/react-draw-chart.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -17,8 +17,6 @@
   },
   "scripts": {
     "dev": "run-p build:watch start",
-    "start": "styleguidist server --open",
-    "styleguide:build": "styleguidist build",
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
     "test": "jest",
@@ -27,9 +25,7 @@
     "lint:fix": "npm run lint --fix",
     "prepare": "npm run build",
     "prerelease": "npm run lint:fix && npm run test:coverage && npm run build",
-    "release": "npm publish",
-    "predeploy": "npm run styleguide:build",
-    "deploy": "gh-pages -d styleguide"
+    "release": "npm publish"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -62,25 +58,21 @@
     "eslint-plugin-jsx-a11y": "^6.2.0",
     "eslint-plugin-react": "^7.12.4",
     "eslint-watch": "^4.0.2",
-    "gh-pages": "^2.0.1",
     "jasmine-expect": "^4.0.1",
     "jest": "^23.6.0",
     "jest-pnp-resolver": "^1.0.2",
     "jest-resolve": "^23.6.0",
-    "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-app-polyfill": "^0.2.0",
     "react-dom": "^16.7.0",
-    "react- ": "^8.0.6",
     "react-test-renderer": "^16.7.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^2.0.1",
     "rollup-plugin-terser": "^4.0.3",
     "rollup-plugin-url": "^2.1.0",
     "webpack": "^4.29.0",
@@ -107,20 +99,17 @@
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/scripts/cssTransform.js",
       "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/scripts/fileTransform.js"
     },
     "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
     ],
     "moduleDirectories": [
       "node_modules",
       "src"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      "^react-native$": "react-native-web"
     },
     "moduleFileExtensions": [
       "web.js",
